@@ -1,6 +1,7 @@
 # facebook-messenger-chat-bot
 A facebook messenger chat bot that can help users to look up bus arriving time and ticket price.
-![finite state graph](https://github.com/a693691122/facebook-messenger-chat-bot/blob/master/img/show-fsm.png "finite state graph")
+
+<img src="https://github.com/a693691122/facebook-messenger-chat-bot/blob/master/img/show-fsm.png" alt="finite state graph" width="800"/>
 
 # States description:
 * user : the initial state
@@ -12,6 +13,7 @@ A facebook messenger chat bot that can help users to look up bus arriving time a
   
   「3」 for knowing the latest discount of the bus fare.
   
+  
 * state2 : require user to input the path name and direction of the path.
 
   Note that the path name and direction should be separated by a space bar.
@@ -19,6 +21,7 @@ A facebook messenger chat bot that can help users to look up bus arriving time a
   for example, 綠1 去, 藍11 返, etc...
   
   the bot will return the arriving time of all stops in this path.
+  
   
 * state3 : require user to input the path name, start stop and end stop.
 
@@ -28,9 +31,18 @@ A facebook messenger chat bot that can help users to look up bus arriving time a
   
   the bot will return the ticket fare.
   
+  
 * state4 : return latest discount immediately after entering this state.
+
 
 * state5 : return the arriving time of all stops in specific path.
 
+
 * state6 : return the ticket fare.
 
+
+# Demo
+
+<img src="https://github.com/a693691122/facebook-messenger-chat-bot/blob/master/img/state1.png" alt="state1" width="400"/>
+
+<img src="https://github.com/a693691122/facebook-messenger-chat-bot/blob/master/img/time_query.png" alt="time_query" width="400"/>
