@@ -119,7 +119,15 @@ def webhook():
     
     if data['object'] == "page":
         event = data['entry'][0]['messaging'][0]
-        machine.advance(event)
+        if 'message' in event:
+            if event['message']['text'] == '返回' and machine.state == 'state5':
+                machine.go_back(event)
+            elif  event['message']['text'] == '返回' and machine.state == 'state6':
+                machine.go_back(event)
+            elif event['message']['text'] and machine.state == 'state4':
+                machine.go_back(event)
+            else:
+                machine.advance(event)
         
     return "ok", 200
 
